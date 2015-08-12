@@ -1,0 +1,16 @@
+{{outlet}}
+<h2 id="mydeck">My Cards</h2>
+<div id="mydeck">
+	<ul id="mydeck">
+	{{#each model as |data| }}
+		<li id="mydeck" class="{{data.primarycolor}}_card">
+			<label id=card_title>{{data.name}}   </label>
+			<label id=card_mana>{{data.visualcost}}</label>
+			<label id=card_text>{{data.visualtext}}</label>
+			{{#if data.power}}
+				<label id=card_attack_block>{{data.power}}/{{data.toughness}}</label>
+			{{/if}}
+		</li>
+	{{/each}}
+	</ul>
+</div>
