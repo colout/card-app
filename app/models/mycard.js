@@ -33,7 +33,7 @@ export default DS.Model.extend({
 					for (var i=0; i<c.length; ++i) {
 					    outHTML.appendChild(document.createTextNode(c[i]));
 
-						// if not the last element, add <br>
+						// if not the last element, add <p>
 					    if (i < c.length - 1) {outHTML.appendChild(document.createElement("br"));}
 					}
 		        }
@@ -50,6 +50,7 @@ export default DS.Model.extend({
 	power: DS.attr('string'),
 	text:  DS.attr('string'), 
 	primarycolor: DS.attr('string'),
+	typedesc: DS.attr('string'),
 	
 	// HTML Formatted...
 	visualcost: function() {
